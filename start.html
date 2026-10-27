@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ようこそ</title>
+
+<script>
+function goHome(){
+
+    const name =
+        document.getElementById("name").value;
+
+    localStorage.setItem("userName",name);
+
+    location.href="index.html";
+}
+</script>
+
+
+<style>
+body{
+    background:#f7f7f7;
+    font-family:"Yu Gothic",sans-serif;
+    display:flex;
+    justify-content:center;
+}
+
+.phone{
+    width:95%;
+    max-width:380px;
+    min-height:100vh;
+    background:white;
+    border-radius:30px;
+    padding:20px;
+    box-sizing:border-box;
+}
+
+h1{
+    text-align:center;
+    margin-top:100px;
+}
+
+input{
+    width:100%;
+    padding:15px;
+    font-size:18px;
+    margin-top:30px;
+    box-sizing:border-box;
+}
+
+button{
+    width:100%;
+    padding:15px;
+    margin-top:20px;
+    border:none;
+    border-radius:30px;
+    background:#ff8eb3;
+    color:white;
+    font-size:18px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="phone">
+
+<h1>起床アプリ</h1>
+
+<input type="text" id="name" placeholder="名前を入力">
+
+<button onclick="goHome()">
+はじめる
+</button>
+
+</div>
+
+
+
+</body>
+</html>

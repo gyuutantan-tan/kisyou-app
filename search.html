@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>探す</title>
+
+<script>
+
+function setAlarm(){
+
+    const hour =
+        document.getElementById("hour").value;
+
+    const minute =
+        document.getElementById("minute").value;
+
+    document.getElementById("result").innerHTML =
+        "アラームを " +
+        hour +
+        ":" +
+        minute +
+        " に設定しました！";
+}
+
+</script>
+
+<style>
+
+body{
+    background:#f7f7f7;
+    font-family:"Yu Gothic",sans-serif;
+    display:flex;
+    justify-content:center;
+}
+
+.phone{
+    width:95%;
+    max-width:380px;
+    min-height:100vh;
+    background:white;
+    border-radius:30px;
+    padding:20px;
+    box-sizing:border-box;
+    position:relative;
+    display:flex;
+    flex-direction:column;
+}
+
+h2{
+    color:#243b53;
+}
+
+.subtitle{
+    text-align:center;
+    color:#666;
+    margin:30px 0;
+}
+
+.time-box{
+    text-align:center;
+    margin:40px 0;
+}
+
+.time-select{
+    font-size:50px;
+    border:none;
+    color:#17324d;
+    background:white;
+}
+
+.set-btn{
+    width:100%;
+    border:none;
+    background:#ff8ea8;
+    color:white;
+    padding:15px;
+    border-radius:30px;
+    font-size:18px;
+    margin-top:40px;
+}
+
+.bottom{
+    position:absolute;
+    bottom:20px;
+    left:0;
+    width:100%;
+    display:flex;
+    justify-content:space-around;
+    text-align:center;
+}
+
+.active{
+    color:#ff8ea8;
+    font-weight:bold;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="phone">
+
+<h2>← アラーム設定</h2>
+
+<div class="subtitle">
+起きたい時間を選んで<br>
+アラームを設定しましょう
+</div>
+
+<div class="time-box">
+<div class="time-box">
+
+    <select id="hour" class="time-select">
+        <option>06</option>
+        <option selected>07</option>
+        <option>08</option>
+        <option>09</option>
+    </select>
+
+    :
+
+    <select id="minute" class="time-select">
+        <option selected>00</option>
+        <option>15</option>
+        <option>30</option>
+        <option>45</option>
+    </select>
+
+</div>
+
+<button class="set-btn" onclick="setAlarm()">
+    設定する
+</button>
+
+<p id="result"></p>
+</div>
+
+
+</button>
+
+<div class="bottom">
+    <div><a href="index.html">🏠<br>ホーム</a></div>
+
+    <div><a href="search.html">🔍<br>探す</a></div>
+
+    <div><a href="point.html">🪙<br>ポイント</a></div>
+
+    <div><a href="mypage.html">👤<br>マイページ</a></div>
+</div>
+
+</div>
+
+</body>
+</html>

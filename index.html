@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>絶対起きる同盟</title>
+
+
+
+<style>
+body{
+    background:#f7f7f7;
+    font-family:"Yu Gothic",sans-serif;
+    margin:0;
+
+    display:flex;
+    justify-content:center;
+
+    padding-top:20px;
+}
+
+.phone{
+    width:95%;
+    max-width:380px;
+    min-height:100vh;
+    background:white;
+    border-radius:30px;
+    padding:20px;
+    box-sizing:border-box;
+    position:relative;
+    display:flex;
+    flex-direction:column;
+}
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.greeting p{
+    color:gray;
+    font-size:12px;
+}
+
+.point{
+    background:#fff4d6;
+    padding:8px 15px;
+    border-radius:20px;
+    color:#c79200;
+    font-weight:bold;
+}
+
+.circle{
+    width:250px;
+    height:250px;
+    background:#fff2f5;
+    border-radius:50%;
+    margin:40px auto;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.circle h1{
+    font-size:60px;
+    color:#17324d;
+    margin:10px 0;
+}
+
+.plus{
+    background:#ff8eb3;
+    color:white;
+    padding:8px 20px;
+    border-radius:20px;
+    font-weight:bold;
+}
+
+.match{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.bottom{
+    position:absolute;
+    bottom:20px;
+    left:0;
+    width:100%;
+    display:flex;
+    justify-content:space-around;
+    text-align:center;
+}
+.active{
+    color:#ff8eb3;
+    font-weight:bold;
+}
+.match-link{
+    text-decoration:none;
+    color:black;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="phone">
+
+    <div class="header">
+        <div class="greeting">
+            <h3 id="hello">☀️ おはようございます！</h3>
+            <p>今日もいっしょに起きよう</p>
+        </div>
+
+        <div class="point">
+            🪙 320pt
+        </div>
+    </div>
+
+    <div class="circle">
+        <div>⏰</div>
+        <h3>起床成功！</h3>
+        <h1>7:00</h1>
+        <div class="plus">+30pt</div>
+    </div>
+
+    <a href="match.html" class="match-link">
+    <div class="match">
+        <div style="font-size:25px;">💗</div>
+        <div>
+            <strong id="matchName">佐賀大学生と</strong><br>
+            マッチングしました！
+        </div>
+    </div>
+ </a>
+
+    <div class="bottom">
+    <div><a href="index.html">🏠<br>ホーム</a></div>
+
+    <div><a href="search.html">🔍<br>探す</a></div>
+
+    <div><a href="point.html">🪙<br>ポイント</a></div>
+
+    <div><a href="mypage.html">👤<br>マイページ</a></div>
+</div>
+
+</div>
+<script>
+
+const name =
+localStorage.getItem("userName");
+
+if(name){
+    document.getElementById("hello").innerHTML =
+"☀️ おはようございます！<br>" + name + "さん";
+}
+
+</script>
+
+
+</body>
+</html>

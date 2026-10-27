@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>マイページ</title>
+
+<style>
+
+body{
+    background:#f7f7f7;
+    font-family:"Yu Gothic",sans-serif;
+    display:flex;
+    justify-content:center;
+}
+
+.phone{
+    width:95%;
+    max-width:380px;
+    min-height:100vh;
+    background:white;
+    border-radius:30px;
+    padding:20px;
+    box-sizing:border-box;
+    position:relative;
+    display:flex;
+    flex-direction:column;
+}
+
+.profile{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.icon{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    background:#ddd;
+}
+
+.id{
+    color:gray;
+    font-size:14px;
+}
+
+.level{
+    margin-top:20px;
+}
+
+.bar{
+    background:#eee;
+    height:12px;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.progress{
+    width:50%;
+    height:100%;
+    background:#ff8eb3;
+}
+
+.exp{
+    text-align:right;
+    color:gray;
+    margin-bottom:5px;
+}
+
+.stats{
+    display:flex;
+    justify-content:space-between;
+    margin-top:20px;
+    gap:10px;
+}
+
+.card{
+    flex:1;
+    background:white;
+    border:1px solid #eee;
+    border-radius:15px;
+    padding:15px;
+    text-align:center;
+}
+
+.card strong{
+    font-size:24px;
+}
+
+.menu{
+    display:flex;
+    justify-content:space-between;
+    padding:10px 10px;
+    border-bottom:1px solid #eee;
+    font-size:16px;
+}
+
+.bottom{
+    position:absolute;
+    bottom:20px;
+    left:0;
+    width:100%;
+    display:flex;
+    justify-content:space-around;
+    text-align:center;
+}
+
+.active{
+    color:#ff8eb3;
+    font-weight:bold;
+}
+
+</style>
+</head>
+<body>
+
+<div class="phone">
+
+<div class="profile">
+    <div class="icon"></div>
+
+    <div>
+        <h2 id="userName">佐賀大学生</h2>
+        <div class="id">ID：1234567</div>
+    </div>
+</div>
+
+<div class="level">
+    <div class="exp">250 / 500</div>
+
+    <div class="bar">
+        <div class="progress"></div>
+    </div>
+</div>
+
+<div class="stats">
+
+    <div class="card">
+        起床成功率<br>
+        <strong>87%</strong>
+    </div>
+
+    <div class="card">
+        連続起床日数<br>
+        <strong>15日</strong>
+    </div>
+
+    <div class="card">
+        平均起床時間<br>
+        <strong>6:45</strong>
+    </div>
+
+</div>
+
+<div style="margin-top:20px;">
+
+<div class="menu">
+    👤 プロフィール編集
+    >
+</div>
+
+<div class="menu">
+    📅 起床記録
+    >
+</div>
+
+<div class="menu">
+    ❓ ヘルプ・お問い合わせ
+    >
+</div>
+
+<div class="menu">
+    🚪 ログアウト
+    >
+</div>
+
+</div>
+
+<div class="bottom">
+    <div><a href="index.html">🏠<br>ホーム</a></div>
+
+    <div><a href="search.html">🔍<br>探す</a></div>
+
+    <div><a href="point.html">🪙<br>ポイント</a></div>
+
+    <div><a href="mypage.html">👤<br>マイページ</a></div>
+</div>
+
+</div>
+<script>
+
+const name = localStorage.getItem("userName");
+
+if(name){
+    document.getElementById("userName").innerHTML =
+    name ;
+}
+
+</script>
+
+</body>
+</html>
